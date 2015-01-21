@@ -7,10 +7,15 @@
 //
 
 #import "MainViewController.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
-@interface MainViewController ()
+@interface MainViewController () <UITextViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView* textView;
+@property (weak, nonatomic) IBOutlet UITextView* previousTextView;
+@property (weak, nonatomic) IBOutlet UITextView* currentTextView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem* submitButton;
+@property CGPoint originalCenter;
+@property BOOL isTextViewBeingEditted;
 
 @end
 
@@ -18,22 +23,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.currentTextView.delegate = self;
+    self.originalCenter = self.view.center;
+}
+
+-(void)textViewDidBeginEditing:(UITextView *)textView {
+    NSLog(@"DID begin editing");
+    self.view.center = CGPointMake(self.view.center.x, self.view.center.y - 200);
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    NSLog(@"ended editting");
+    self.view.center = self.originalCenter;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (![touches isKindOfClass:[UITextView class]]) {
+        [self.view endEditing:true];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
