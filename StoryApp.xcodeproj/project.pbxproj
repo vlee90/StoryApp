@@ -17,6 +17,7 @@
 		EBBD1B161A6F175E002C7ABB /* StoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */; };
 		EBBD1B1A1A6F21D4002C7ABB /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */; };
 		EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */; };
+		EBBD1B231A6F2831002C7ABB /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B221A6F2831002C7ABB /* MainViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
 		EBBD1B1E1A6F22C7002C7ABB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		EBBD1B211A6F2831002C7ABB /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
+		EBBD1B221A6F2831002C7ABB /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 		EBBD1B1C1A6F22A3002C7ABB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EBBD1B211A6F2831002C7ABB /* MainViewModel.h */,
+				EBBD1B221A6F2831002C7ABB /* MainViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -319,6 +324,7 @@
 				EB33EBB71A67371A009CD277 /* StoryApp.xcdatamodeld in Sources */,
 				EB33EBB41A67371A009CD277 /* AppDelegate.m in Sources */,
 				EB33EBB11A67371A009CD277 /* main.m in Sources */,
+				EBBD1B231A6F2831002C7ABB /* MainViewModel.m in Sources */,
 				EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
