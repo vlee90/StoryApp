@@ -18,4 +18,6 @@
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) Story *story;
 
+- (Section*)initSection:(NSString*)author storyText:(NSString*)text publishedDate:(NSDate*)date inStory:(Story*)story;
+
 @end
