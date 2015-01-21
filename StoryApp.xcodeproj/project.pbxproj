@@ -15,6 +15,8 @@
 		EB33EBBF1A67371B009CD277 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB33EBBE1A67371B009CD277 /* Images.xcassets */; };
 		EB33EBC21A67371B009CD277 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB33EBC01A67371B009CD277 /* LaunchScreen.xib */; };
 		EBBD1B161A6F175E002C7ABB /* StoryboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */; };
+		EBBD1B1A1A6F21D4002C7ABB /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */; };
+		EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,9 @@
 		EB33EBC71A67371B009CD277 /* StoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB33EBCC1A67371B009CD277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardTests.m; sourceTree = "<group>"; };
+		EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
+		EBBD1B1E1A6F22C7002C7ABB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,9 @@
 		EB33EBAD1A67371A009CD277 /* StoryApp */ = {
 			isa = PBXGroup;
 			children = (
+				EBBD1B1D1A6F22B1002C7ABB /* Model */,
+				EBBD1B1C1A6F22A3002C7ABB /* ViewModel */,
+				EBBD1B1B1A6F229C002C7ABB /* ViewController */,
 				EB33EBB21A67371A009CD277 /* AppDelegate.h */,
 				EB33EBB31A67371A009CD277 /* AppDelegate.m */,
 				EB33EBBB1A67371B009CD277 /* Main.storyboard */,
@@ -127,7 +135,7 @@
 		EB33EBCA1A67371B009CD277 /* StoryAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */,
+				EBBD1B181A6F21B7002C7ABB /* StoryboardTests */,
 				EB33EBCB1A67371B009CD277 /* Supporting Files */,
 			);
 			path = StoryAppTests;
@@ -139,6 +147,38 @@
 				EB33EBCC1A67371B009CD277 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EBBD1B181A6F21B7002C7ABB /* StoryboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */,
+				EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */,
+			);
+			name = StoryboardTests;
+			sourceTree = "<group>";
+		};
+		EBBD1B1B1A6F229C002C7ABB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EBBD1B1E1A6F22C7002C7ABB /* MainViewController.h */,
+				EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		EBBD1B1C1A6F22A3002C7ABB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBBD1B1D1A6F22B1002C7ABB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +319,7 @@
 				EB33EBB71A67371A009CD277 /* StoryApp.xcdatamodeld in Sources */,
 				EB33EBB41A67371A009CD277 /* AppDelegate.m in Sources */,
 				EB33EBB11A67371A009CD277 /* main.m in Sources */,
+				EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBD1B161A6F175E002C7ABB /* StoryboardTests.m in Sources */,
+				EBBD1B1A1A6F21D4002C7ABB /* MainViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

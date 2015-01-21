@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SV7-Kw-LHN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Stories-->
@@ -63,7 +64,7 @@
         <!--Main-->
         <scene sceneID="Xdx-Dx-Fr7">
             <objects>
-                <viewController storyboardIdentifier="SBMainVC" title="Main" id="usg-RX-pO8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SBMainVC" title="Main" id="usg-RX-pO8" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adG-R9-Mpn"/>
                         <viewControllerLayoutGuide type="bottom" id="y9V-oR-m82"/>
@@ -71,13 +72,65 @@
                     <view key="view" contentMode="scaleToFill" id="hcT-tB-BvL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="User Input" translatesAutoresizingMaskIntoConstraints="NO" id="aUE-07-wcd">
+                                <rect key="frame" x="36" y="331" width="528" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="dei-9g-0SJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uck-xg-TcR">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Main" id="mrj-IV-1yJ">
+                                        <barButtonItem key="rightBarButtonItem" title="BarButton" id="PyD-dA-fUp"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Previous writtings" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRM-OB-SQR">
+                                <rect key="frame" x="36" y="84" width="528" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="NdH-k2-84Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.43644371879999999" green="0.67517066429999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="uck-xg-TcR" firstAttribute="top" secondItem="adG-R9-Mpn" secondAttribute="bottom" id="14E-MH-CNH"/>
+                            <constraint firstItem="y9V-oR-m82" firstAttribute="top" secondItem="aUE-07-wcd" secondAttribute="bottom" constant="20" id="6Tf-UO-ABF"/>
+                            <constraint firstItem="XRM-OB-SQR" firstAttribute="leading" secondItem="hcT-tB-BvL" secondAttribute="leadingMargin" constant="20" id="6Xh-vA-myP"/>
+                            <constraint firstItem="aUE-07-wcd" firstAttribute="leading" secondItem="hcT-tB-BvL" secondAttribute="leadingMargin" constant="20" id="Cc9-E6-N93"/>
+                            <constraint firstItem="XRM-OB-SQR" firstAttribute="top" secondItem="uck-xg-TcR" secondAttribute="bottom" constant="20" id="E9H-U0-0mm"/>
+                            <constraint firstItem="aUE-07-wcd" firstAttribute="top" secondItem="XRM-OB-SQR" secondAttribute="bottom" constant="20" id="LNr-yW-UKh"/>
+                            <constraint firstAttribute="centerX" secondItem="XRM-OB-SQR" secondAttribute="centerX" id="TIy-RA-qgs"/>
+                            <constraint firstAttribute="trailing" secondItem="uck-xg-TcR" secondAttribute="trailing" id="Vgm-fz-G6k"/>
+                            <constraint firstItem="uck-xg-TcR" firstAttribute="leading" secondItem="hcT-tB-BvL" secondAttribute="leading" id="d7m-na-fnn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XRM-OB-SQR" secondAttribute="trailing" constant="20" id="eLg-Hc-d9t"/>
+                            <constraint firstItem="XRM-OB-SQR" firstAttribute="top" secondItem="uck-xg-TcR" secondAttribute="bottom" constant="20" id="gOr-UX-X7D"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aUE-07-wcd" secondAttribute="trailing" constant="20" id="kFI-Gi-6mm"/>
+                            <constraint firstAttribute="centerX" secondItem="aUE-07-wcd" secondAttribute="centerX" id="sTZ-Re-kCX"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gOr-UX-X7D"/>
+                                <exclude reference="LNr-yW-UKh"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main" id="HNx-lZ-WST"/>
+                    <connections>
+                        <outlet property="textView" destination="aUE-07-wcd" id="afZ-EF-ORC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibe-3q-9bH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="-63"/>
+            <point key="canvasLocation" x="163" y="-52"/>
         </scene>
         <!--Login-->
         <scene sceneID="Gx5-Xd-KMq">
