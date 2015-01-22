@@ -21,6 +21,8 @@
 		EBBD1B261A706DB7002C7ABB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B251A706DB7002C7ABB /* User.m */; };
 		EBBD1B291A706DB8002C7ABB /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B281A706DB8002C7ABB /* Story.m */; };
 		EBBD1B2C1A706DB8002C7ABB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B2B1A706DB8002C7ABB /* Section.m */; };
+		EBBD1B361A7089B0002C7ABB /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B351A7089B0002C7ABB /* LoginViewModel.m */; };
+		EBBD1B391A7089D4002C7ABB /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B381A7089D4002C7ABB /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,10 @@
 		EBBD1B281A706DB8002C7ABB /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		EBBD1B2A1A706DB8002C7ABB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		EBBD1B2B1A706DB8002C7ABB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		EBBD1B341A7089B0002C7ABB /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		EBBD1B351A7089B0002C7ABB /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		EBBD1B371A7089D4002C7ABB /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		EBBD1B381A7089D4002C7ABB /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,8 @@
 			children = (
 				EBBD1B1E1A6F22C7002C7ABB /* MainViewController.h */,
 				EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */,
+				EBBD1B371A7089D4002C7ABB /* LoginViewController.h */,
+				EBBD1B381A7089D4002C7ABB /* LoginViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -184,6 +192,8 @@
 			children = (
 				EBBD1B211A6F2831002C7ABB /* MainViewModel.h */,
 				EBBD1B221A6F2831002C7ABB /* MainViewModel.m */,
+				EBBD1B341A7089B0002C7ABB /* LoginViewModel.h */,
+				EBBD1B351A7089B0002C7ABB /* LoginViewModel.m */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -340,9 +350,11 @@
 				EBBD1B2C1A706DB8002C7ABB /* Section.m in Sources */,
 				EB33EBB41A67371A009CD277 /* AppDelegate.m in Sources */,
 				EBBD1B261A706DB7002C7ABB /* User.m in Sources */,
+				EBBD1B391A7089D4002C7ABB /* LoginViewController.m in Sources */,
 				EB33EBB11A67371A009CD277 /* main.m in Sources */,
 				EBBD1B231A6F2831002C7ABB /* MainViewModel.m in Sources */,
 				EBBD1B291A706DB8002C7ABB /* Story.m in Sources */,
+				EBBD1B361A7089B0002C7ABB /* LoginViewModel.m in Sources */,
 				EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
