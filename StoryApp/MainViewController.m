@@ -12,7 +12,7 @@
 
 @interface MainViewController () <UITextViewDelegate>
 
-@property (weak, nonatomic) MainViewModel* mainViewModel;
+@property (strong, nonatomic) MainViewModel* mainViewModel;
 @property (weak, nonatomic) IBOutlet UITextView* previousTextView;
 @property (weak, nonatomic) IBOutlet UITextView* currentTextView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem* submitButton;
@@ -28,6 +28,11 @@
     self.currentTextView.delegate = self;
     self.originalCenter = self.view.center;
     self.mainViewModel = [[MainViewModel alloc] init];
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:true];
+    [self performSegueWithIdentifier:@"LoginSegue" sender:self];
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView {
