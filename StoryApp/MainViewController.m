@@ -25,6 +25,8 @@
     [super viewDidLoad];
     self.currentTextView.delegate = self;
     self.originalCenter = self.view.center;
+    
+    RAC(self.submitButton, title) = 
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView {
