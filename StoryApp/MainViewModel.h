@@ -10,7 +10,6 @@
 
 @interface MainViewModel : NSObject
 
-@property (strong, nonatomic) NSString* previousStoryText;
-
+- (void)submitButtonTouched:(NSString*)text forStoryTitled:(NSString*)title;
 
 @end

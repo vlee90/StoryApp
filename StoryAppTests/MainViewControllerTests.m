@@ -10,6 +10,7 @@
 #import <XCTest/XCTest.h>
 #import "MainViewController.h"
 
+
 @interface MainViewControllerTests : XCTestCase
 
 @property (strong, nonatomic) UIStoryboard* storyboard;
@@ -30,10 +31,6 @@
     [super tearDown];
     self.storyboard = nil;
     self.mainViewController = nil;
-}
-
-- (void)testTextView {
-    
 }
 
 - (void)testPerformanceExample {

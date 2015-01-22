@@ -56,10 +56,6 @@
     XCTAssertNotNil(self.storyViewController, @"StoryViewController should not be nil");
 }
 
-- (void)testMainViewController {
-    
-}
-
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
