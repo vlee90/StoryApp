@@ -21,6 +21,7 @@
 		EBBD1B261A706DB7002C7ABB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B251A706DB7002C7ABB /* User.m */; };
 		EBBD1B291A706DB8002C7ABB /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B281A706DB8002C7ABB /* Story.m */; };
 		EBBD1B2C1A706DB8002C7ABB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B2B1A706DB8002C7ABB /* Section.m */; };
+		EBBD1B301A707EAB002C7ABB /* MainViewModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B2F1A707EAB002C7ABB /* MainViewModelTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		EBBD1B281A706DB8002C7ABB /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		EBBD1B2A1A706DB8002C7ABB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
 		EBBD1B2B1A706DB8002C7ABB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
+		EBBD1B2F1A707EAB002C7ABB /* MainViewModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModelTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,8 @@
 		EB33EBCA1A67371B009CD277 /* StoryAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBBD1B2F1A707EAB002C7ABB /* MainViewModelTests.m */,
+				EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */,
 				EBBD1B181A6F21B7002C7ABB /* StoryboardTests */,
 				EB33EBCB1A67371B009CD277 /* Supporting Files */,
 			);
@@ -165,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */,
-				EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */,
 			);
 			name = StoryboardTests;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBD1B161A6F175E002C7ABB /* StoryboardTests.m in Sources */,
+				EBBD1B301A707EAB002C7ABB /* MainViewModelTests.m in Sources */,
 				EBBD1B1A1A6F21D4002C7ABB /* MainViewControllerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

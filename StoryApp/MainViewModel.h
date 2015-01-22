@@ -10,7 +10,6 @@
 
 @interface MainViewModel : NSObject
 
-@property (strong, nonatomic) NSString* previousStoryText;
-
+//- (void)submitSectionText;
 
 @end
