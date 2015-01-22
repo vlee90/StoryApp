@@ -33,10 +33,10 @@
     XCTAssertNotNil(self.mainViewModel, @"MainViewModel should not be nil");
 }
 
-//- (void)testSubmitButtonCreatesAStory {
+- (void)testSubmitButtonCreatesAStory {
 //    Story* story = [self.mainViewModel createAStory];
-//    XCTAssertEqualObjects(story, [Story class]);
-//}
+//    XCTAssertEqualObjects(story, [Story class], @"This should create a Story Object");
+}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.

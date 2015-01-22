@@ -33,6 +33,12 @@
     self.currentTextView.delegate = self;
     self.titleTextField.delegate = self;
     self.originalCenter = self.view.center;
+    self.mainViewModel = [[MainViewModel alloc] init];
+}
+
+#pragma mark - IBActions:
+-(IBAction)submitButtonTouched:(id)sender {
+    [self.mainViewModel submitButtonTouched:self.currentTextView.text forStoryTitled:self.titleTextField.text];
 }
 
 #pragma mark - TextField Methods:

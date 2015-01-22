@@ -21,12 +21,13 @@
 
 @implementation MainViewModel
 
-//- (Story*)createAStory {
-//    
-//}
-//
-//- (Section*)createASection{
-//    
-//}
+-(void)submitButtonTouched:(NSString *)text forStoryTitled:(NSString *)title {
+    if ([title isEqual: @""]) {
+        NSLog(@"Please name title");
+    }
+    else {
+        
+    }
+}
 
 @end

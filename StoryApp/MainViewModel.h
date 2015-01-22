@@ -10,6 +10,6 @@
 
 @interface MainViewModel : NSObject
 
-//- (void)submitSectionText;
+- (void)submitButtonTouched:(NSString*)text forStoryTitled:(NSString*)title;
 
 @end
