@@ -18,6 +18,9 @@
 		EBBD1B1A1A6F21D4002C7ABB /* MainViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */; };
 		EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */; };
 		EBBD1B231A6F2831002C7ABB /* MainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B221A6F2831002C7ABB /* MainViewModel.m */; };
+		EBBD1B261A706DB7002C7ABB /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B251A706DB7002C7ABB /* User.m */; };
+		EBBD1B291A706DB8002C7ABB /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B281A706DB8002C7ABB /* Story.m */; };
+		EBBD1B2C1A706DB8002C7ABB /* Section.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBD1B2B1A706DB8002C7ABB /* Section.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		EBBD1B1F1A6F22C7002C7ABB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		EBBD1B211A6F2831002C7ABB /* MainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewModel.h; sourceTree = "<group>"; };
 		EBBD1B221A6F2831002C7ABB /* MainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
+		EBBD1B241A706DB7002C7ABB /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		EBBD1B251A706DB7002C7ABB /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		EBBD1B271A706DB8002C7ABB /* Story.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
+		EBBD1B281A706DB8002C7ABB /* Story.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
+		EBBD1B2A1A706DB8002C7ABB /* Section.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Section.h; sourceTree = "<group>"; };
+		EBBD1B2B1A706DB8002C7ABB /* Section.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Section.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +191,12 @@
 		EBBD1B1D1A6F22B1002C7ABB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EBBD1B2A1A706DB8002C7ABB /* Section.h */,
+				EBBD1B2B1A706DB8002C7ABB /* Section.m */,
+				EBBD1B271A706DB8002C7ABB /* Story.h */,
+				EBBD1B281A706DB8002C7ABB /* Story.m */,
+				EBBD1B241A706DB7002C7ABB /* User.h */,
+				EBBD1B251A706DB7002C7ABB /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,9 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB33EBB71A67371A009CD277 /* StoryApp.xcdatamodeld in Sources */,
+				EBBD1B2C1A706DB8002C7ABB /* Section.m in Sources */,
 				EB33EBB41A67371A009CD277 /* AppDelegate.m in Sources */,
+				EBBD1B261A706DB7002C7ABB /* User.m in Sources */,
 				EB33EBB11A67371A009CD277 /* main.m in Sources */,
 				EBBD1B231A6F2831002C7ABB /* MainViewModel.m in Sources */,
+				EBBD1B291A706DB8002C7ABB /* Story.m in Sources */,
 				EBBD1B201A6F22C7002C7ABB /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

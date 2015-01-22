@@ -10,4 +10,7 @@
 
 @interface MainViewModel : NSObject
 
+@property (strong, nonatomic) NSString* previousStoryText;
+
+
 @end

@@ -8,9 +8,11 @@
 
 #import "MainViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "MainViewModel.h"
 
 @interface MainViewController () <UITextViewDelegate>
 
+@property (weak, nonatomic) MainViewModel* mainViewModel;
 @property (weak, nonatomic) IBOutlet UITextView* previousTextView;
 @property (weak, nonatomic) IBOutlet UITextView* currentTextView;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem* submitButton;
@@ -25,6 +27,7 @@
     [super viewDidLoad];
     self.currentTextView.delegate = self;
     self.originalCenter = self.view.center;
+    self.mainViewModel = [[MainViewModel alloc] init];
 }
 
 -(void)textViewDidBeginEditing:(UITextView *)textView {
