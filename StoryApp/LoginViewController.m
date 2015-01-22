@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LoginViewModel.h"
 
 @interface LoginViewController ()
 
@@ -14,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField* passwordTextField;
 @property (weak, nonatomic) IBOutlet UIButton* loginButton;
 @property (weak, nonatomic) IBOutlet UIButton* createAccountButton;
-
+@property (strong, nonatomic) LoginViewModel* loginViewModel;
 
 @end
 
@@ -22,11 +23,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.loginViewModel = [[LoginViewModel alloc] init];
 }
 
 -(IBAction)loginButtonPressed:(id)sender {
-    
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 -(IBAction)createAccountButtonPressed:(id)sender {

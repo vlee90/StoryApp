@@ -128,6 +128,7 @@
                         <outlet property="currentTextView" destination="aUE-07-wcd" id="zYg-5i-hsX"/>
                         <outlet property="previousTextView" destination="XRM-OB-SQR" id="3R7-2l-N0e"/>
                         <outlet property="submitButton" destination="PyD-dA-fUp" id="2sY-0M-t2k"/>
+                        <segue destination="coK-7d-uzZ" kind="presentation" identifier="LoginSegue" id="qcz-0d-hrG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibe-3q-9bH" userLabel="First Responder" sceneMemberID="firstResponder"/>
