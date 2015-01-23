@@ -28,4 +28,9 @@
     }
 }
 
+-(User *)createUserWithName:(NSString *)name withPassword:(NSString *)password {
+    User* user = [[User alloc] initWithName:name withPassword:password];
+    return user;
+}
+
 @end

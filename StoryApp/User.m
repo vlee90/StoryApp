@@ -15,4 +15,12 @@
 @dynamic password;
 @dynamic stories;
 
+-(instancetype)initWithName:(NSString*)name withPassword:(NSString*)password {
+    if (self = [super init]) {
+        self.name = name;
+        self.password = password;
+    }
+    return self;
+}
+
 @end

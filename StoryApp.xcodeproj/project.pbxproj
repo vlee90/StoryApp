@@ -522,7 +522,6 @@
 		};
 		EB33EBD61A67371B009CD277 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 648D240BE007D42ED1A5C882 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = StoryAppTests/Info.plist;

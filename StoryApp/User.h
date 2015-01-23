@@ -23,5 +23,6 @@
 - (void)removeStoriesObject:(NSManagedObject *)value;
 - (void)addStories:(NSSet *)values;
 - (void)removeStories:(NSSet *)values;
+-(instancetype)initWithName:(NSString*)name withPassword:(NSString*)password;
 
 @end

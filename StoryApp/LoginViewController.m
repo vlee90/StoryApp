@@ -69,7 +69,8 @@
 }
 
 -(IBAction)createAccountButtonPressed:(id)sender {
-    
+    [self.loginViewModel createUserWithName:self.usernameTextField.text withPassword:self.passwordTextField.text];
+    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

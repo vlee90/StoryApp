@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "LoginViewModel.h"
-#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "User.h"
 
 @interface LoginTests : XCTestCase
 
@@ -51,6 +51,13 @@
     XCTAssertTrue(validPassword, @"ValidPassword should be true");
     BOOL invalidPassword = [self.loginViewModel isPasswordValid:badPassword];
     XCTAssertFalse(invalidPassword, @"InvalidPassword should be false");
+}
+
+-(void)testCreatingAUser {
+    NSString* name = @"Vincent";
+    NSString* password = @"1234567";
+    User* user = [self.loginViewModel createUserWithName:name withPassword:password];
+    XCTAssertEqualObjects(user, [User class]);
 }
 
 - (void)testPerformanceExample {
