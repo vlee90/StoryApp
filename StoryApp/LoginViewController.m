@@ -8,6 +8,7 @@
 
 #import "LoginViewController.h"
 #import "LoginViewModel.h"
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface LoginViewController ()
 
@@ -24,6 +25,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.loginViewModel = [[LoginViewModel alloc] init];
+    
+    RACSignal* usernameValidSignal =
+        [[self.usernameTextField rac_textSignal]
+         map:^id(NSString* text) {
+             return @([self.loginViewModel isUsernameValid:text]);
+         }];
+    RAC(self.usernameTextField, backgroundColor) =
+        [usernameValidSignal
+         map:^id(NSNumber* usernameValid) {
+             return [usernameValid boolValue] ? [UIColor greenColor] : [UIColor whiteColor];
+         }];
+    RACSignal* passwordValidSignal =
+        [[self.passwordTextField rac_textSignal]
+        map:^id(NSString* text) {
+            return @([self.loginViewModel isPasswordValid:text]);
+        }];
+    RAC(self.passwordTextField, backgroundColor) =
+        [passwordValidSignal
+         map:^id(NSNumber* passwordValid) {
+             return [passwordValid boolValue] ? [UIColor greenColor] : [UIColor whiteColor];
+         }];
+    
+    RACSignal* validFormSignal =
+        [RACSignal combineLatest:@[usernameValidSignal, passwordValidSignal]
+            reduce:^id(NSNumber* usernameValid, NSNumber* passwordValid){
+                return @([usernameValid boolValue] && [passwordValid boolValue]);
+            }];
+    RAC(self.loginButton, enabled) =
+        [validFormSignal
+        map:^id(NSNumber* formValid) {
+            return [formValid boolValue] ? @(true) : @(false);
+        }];
+    RAC(self.createAccountButton, enabled) =
+        [validFormSignal
+         map:^id(NSNumber* formValid) {
+             return [formValid boolValue] ? @(true) : @(false);
+         }];
 }
 
 -(IBAction)loginButtonPressed:(id)sender {

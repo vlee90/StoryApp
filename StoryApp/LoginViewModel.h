@@ -10,4 +10,7 @@
 
 @interface LoginViewModel : NSObject
 
+-(BOOL)isUsernameValid:(NSString*)username;
+-(BOOL)isPasswordValid:(NSString*)password;
+
 @end
