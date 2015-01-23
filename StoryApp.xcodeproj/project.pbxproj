@@ -51,6 +51,7 @@
 		EB33EBC11A67371B009CD277 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		EB33EBC71A67371B009CD277 /* StoryAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB33EBCC1A67371B009CD277 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB6E89E1A71BF70008D2CC8 /* libPods-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-ReactiveCocoa.a"; path = "Pods/build/Debug-iphoneos/libPods-ReactiveCocoa.a"; sourceTree = "<group>"; };
 		EBBD1B151A6F175E002C7ABB /* StoryboardTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardTests.m; sourceTree = "<group>"; };
 		EBBD1B191A6F21D4002C7ABB /* MainViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewControllerTests.m; sourceTree = "<group>"; };
 		EBBD1B1E1A6F22C7002C7ABB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		0136E80B5AA0CF51964E761E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBB6E89E1A71BF70008D2CC8 /* libPods-ReactiveCocoa.a */,
 				178F0F593A5FF78A933E8641 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -504,12 +506,9 @@
 		};
 		EB33EBD51A67371B009CD277 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B3F177CDD5C1C9EB7634693 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -525,10 +524,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = StoryAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

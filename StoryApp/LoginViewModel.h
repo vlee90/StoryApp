@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User.h"
 
 @interface LoginViewModel : NSObject
+
+-(BOOL)isUsernameValid:(NSString*)username;
+-(BOOL)isPasswordValid:(NSString*)password;
+-(User*)createUserWithName:(NSString*)name withPassword:(NSString*)password;
+
+
 
 @end

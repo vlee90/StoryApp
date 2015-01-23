@@ -18,12 +18,13 @@
 @dynamic story;
 
 - (Section *)initSection:(NSString *)author storyText:(NSString *)text publishedDate:(NSDate *)date inStory:(Story *)story{
-    Section* section = [[Section alloc] init];
-    section.author = author;
-    section.text = text;
-    section.date = date;
-    section.story = story;
-    return section;
+    if (self = [super init]) {
+        self.author = author;
+        self.text = text;
+        self.date = date;
+        self.story = story;
+    }
+    return self;
 }
 
 @end
